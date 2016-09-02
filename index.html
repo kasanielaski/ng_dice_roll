@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app='DiceRoll'>
+<head>
+	<title>AngularJS_test</title>
+	<meta charset="utf-8">
+	<script src ='script.js' type="text/javascript"></script>
+	<script src ='angular.js'></script>
+</head>
+<body ng-controller='DiceRollCtrl'>
+	<h1>Привет, {{data.name}}!</h1>
+	<input ng-model="data.name">
+	 <button ng-click='addResults()'>Бросить кубик</button>
+	 <ul>
+	 	<li ng-repeat='results in data.diceResults'>
+	 		{{results.name}} - {{results.value}}
+	 	</li>
+	 </ul>
+</body>
+</html>
